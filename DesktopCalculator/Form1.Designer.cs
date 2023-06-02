@@ -51,7 +51,7 @@
             // 
             // zeroButton
             // 
-            zeroButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            zeroButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             zeroButton.Location = new Point(12, 307);
             zeroButton.Name = "zeroButton";
             zeroButton.Size = new Size(59, 51);
@@ -61,7 +61,7 @@
             // 
             // pointButton
             // 
-            pointButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            pointButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             pointButton.Location = new Point(77, 307);
             pointButton.Name = "pointButton";
             pointButton.Size = new Size(59, 51);
@@ -72,7 +72,7 @@
             // clearButton
             // 
             clearButton.BackColor = Color.Tomato;
-            clearButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            clearButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             clearButton.Location = new Point(142, 307);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(59, 51);
@@ -83,7 +83,7 @@
             // addButton
             // 
             addButton.BackColor = Color.Turquoise;
-            addButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            addButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             addButton.Location = new Point(207, 307);
             addButton.Name = "addButton";
             addButton.Size = new Size(59, 51);
@@ -94,7 +94,7 @@
             // subButton
             // 
             subButton.BackColor = Color.Turquoise;
-            subButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            subButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             subButton.Location = new Point(207, 250);
             subButton.Name = "subButton";
             subButton.Size = new Size(59, 51);
@@ -104,7 +104,7 @@
             // 
             // threeButton
             // 
-            threeButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            threeButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             threeButton.Location = new Point(142, 250);
             threeButton.Name = "threeButton";
             threeButton.Size = new Size(59, 51);
@@ -114,7 +114,7 @@
             // 
             // twoButton
             // 
-            twoButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            twoButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             twoButton.Location = new Point(77, 250);
             twoButton.Name = "twoButton";
             twoButton.Size = new Size(59, 51);
@@ -124,7 +124,7 @@
             // 
             // oneButton
             // 
-            oneButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            oneButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             oneButton.Location = new Point(12, 250);
             oneButton.Name = "oneButton";
             oneButton.Size = new Size(59, 51);
@@ -135,7 +135,7 @@
             // multButton
             // 
             multButton.BackColor = Color.Turquoise;
-            multButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            multButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             multButton.Location = new Point(208, 193);
             multButton.Name = "multButton";
             multButton.Size = new Size(59, 51);
@@ -145,7 +145,7 @@
             // 
             // sixButton
             // 
-            sixButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            sixButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             sixButton.Location = new Point(143, 193);
             sixButton.Name = "sixButton";
             sixButton.Size = new Size(59, 51);
@@ -155,7 +155,7 @@
             // 
             // fiveButton
             // 
-            fiveButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            fiveButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             fiveButton.Location = new Point(78, 193);
             fiveButton.Name = "fiveButton";
             fiveButton.Size = new Size(59, 51);
@@ -165,7 +165,7 @@
             // 
             // fourButton
             // 
-            fourButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            fourButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             fourButton.Location = new Point(13, 193);
             fourButton.Name = "fourButton";
             fourButton.Size = new Size(59, 51);
@@ -176,7 +176,7 @@
             // divButton
             // 
             divButton.BackColor = Color.Turquoise;
-            divButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            divButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             divButton.Location = new Point(208, 136);
             divButton.Name = "divButton";
             divButton.Size = new Size(59, 51);
@@ -186,7 +186,7 @@
             // 
             // nineButton
             // 
-            nineButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            nineButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             nineButton.Location = new Point(143, 136);
             nineButton.Name = "nineButton";
             nineButton.Size = new Size(59, 51);
@@ -196,7 +196,7 @@
             // 
             // eightButton
             // 
-            eightButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            eightButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             eightButton.Location = new Point(78, 136);
             eightButton.Name = "eightButton";
             eightButton.Size = new Size(59, 51);
@@ -206,7 +206,7 @@
             // 
             // sevenButton
             // 
-            sevenButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            sevenButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             sevenButton.Location = new Point(13, 136);
             sevenButton.Name = "sevenButton";
             sevenButton.Size = new Size(59, 51);
@@ -217,7 +217,7 @@
             // equalMarkButton
             // 
             equalMarkButton.BackColor = SystemColors.Highlight;
-            equalMarkButton.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            equalMarkButton.Font = new Font("Arial", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             equalMarkButton.Location = new Point(13, 364);
             equalMarkButton.Name = "equalMarkButton";
             equalMarkButton.Size = new Size(253, 51);
