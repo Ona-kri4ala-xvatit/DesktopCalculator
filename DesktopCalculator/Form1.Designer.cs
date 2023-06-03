@@ -45,8 +45,8 @@
             eightButton = new Button();
             sevenButton = new Button();
             equalMarkButton = new Button();
+            resultRichTextBox = new RichTextBox();
             inputRichTextBox = new RichTextBox();
-            solveRichTextBox = new RichTextBox();
             SuspendLayout();
             // 
             // zeroButton
@@ -241,40 +241,40 @@
             equalMarkButton.Text = "=";
             equalMarkButton.UseVisualStyleBackColor = false;
             // 
+            // resultRichTextBox
+            // 
+            resultRichTextBox.BorderStyle = BorderStyle.FixedSingle;
+            resultRichTextBox.Enabled = false;
+            resultRichTextBox.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            resultRichTextBox.ForeColor = Color.FromArgb(0, 0, 64);
+            resultRichTextBox.Location = new Point(13, 44);
+            resultRichTextBox.Name = "resultRichTextBox";
+            resultRichTextBox.ReadOnly = true;
+            resultRichTextBox.RightToLeft = RightToLeft.Yes;
+            resultRichTextBox.Size = new Size(255, 86);
+            resultRichTextBox.TabIndex = 17;
+            resultRichTextBox.Text = "";
+            // 
             // inputRichTextBox
             // 
             inputRichTextBox.BorderStyle = BorderStyle.FixedSingle;
             inputRichTextBox.Enabled = false;
-            inputRichTextBox.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            inputRichTextBox.ForeColor = Color.FromArgb(0, 0, 64);
-            inputRichTextBox.Location = new Point(13, 44);
+            inputRichTextBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            inputRichTextBox.Location = new Point(13, 6);
             inputRichTextBox.Name = "inputRichTextBox";
             inputRichTextBox.ReadOnly = true;
             inputRichTextBox.RightToLeft = RightToLeft.Yes;
-            inputRichTextBox.Size = new Size(255, 86);
-            inputRichTextBox.TabIndex = 17;
+            inputRichTextBox.Size = new Size(255, 32);
+            inputRichTextBox.TabIndex = 18;
             inputRichTextBox.Text = "";
-            // 
-            // solveRichTextBox
-            // 
-            solveRichTextBox.BorderStyle = BorderStyle.FixedSingle;
-            solveRichTextBox.Enabled = false;
-            solveRichTextBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            solveRichTextBox.Location = new Point(13, 6);
-            solveRichTextBox.Name = "solveRichTextBox";
-            solveRichTextBox.ReadOnly = true;
-            solveRichTextBox.RightToLeft = RightToLeft.Yes;
-            solveRichTextBox.Size = new Size(255, 32);
-            solveRichTextBox.TabIndex = 18;
-            solveRichTextBox.Text = "";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(280, 427);
-            Controls.Add(solveRichTextBox);
             Controls.Add(inputRichTextBox);
+            Controls.Add(resultRichTextBox);
             Controls.Add(equalMarkButton);
             Controls.Add(divButton);
             Controls.Add(nineButton);
@@ -319,7 +319,7 @@
         private Button eightButton;
         private Button sevenButton;
         private Button equalMarkButton;
+        private RichTextBox resultRichTextBox;
         private RichTextBox inputRichTextBox;
-        private RichTextBox solveRichTextBox;
     }
 }

@@ -18,46 +18,86 @@ namespace DesktopCalculator
             nineButton.Click += ButtonClick;
             zeroButton.Click += ButtonClick;
             pointButton.Click += ButtonClick;
-            clearButton.Click += ButtonClick;
-            addButton.Click += ButtonClick;
-            subButton.Click += ButtonClick;
-            multButton.Click += ButtonClick;
-            divButton.Click += ButtonClick;
+            clearButton.Click += ButtonClear;
+            addButton.Click += SetOperation;
+            subButton.Click += SetOperation;
+            multButton.Click += SetOperation;
+            divButton.Click += SetOperation;
+            equalMarkButton.Click += EqualOperation;
             #endregion
         }
 
+        private double value = 0;
+        private string operation = string.Empty;
+        private bool operationPressed = false;
+
         private void ButtonClick(object? sender, EventArgs e)
         {
-            double firstNumber = 0;
-            double secondNumber = 0;
-
             if (sender is Button button)
             {
-                var inputText = button.Text; //Текст кнопки
-                string str = inputRichTextBox.Text; //строка ввода
+                var buttonText = button.Text; //Текст кнопки
+                var resultText = inputRichTextBox.Text; //строка ввода
 
-                if (inputText == "C")
+                if (resultText == "0" || (operationPressed))
                 {
-                    if (string.IsNullOrEmpty(str))
+                    inputRichTextBox.Clear();
+                    resultRichTextBox.Clear();
+                    value = 0;
+                }
+
+                if (buttonText == ".")
+                {
+                    if (!resultText.Contains("."))
                     {
-                        return;
-                    }
-                    else
-                    {
-                        inputRichTextBox.Text = str.Remove(str.Length - 1);
+                        inputRichTextBox.Text += buttonText;
+                        resultRichTextBox.Text += buttonText;
                     }
                 }
                 else
                 {
-                    inputRichTextBox.Text += inputText;
-                    firstNumber = double.Parse(inputText);
+                    inputRichTextBox.Text += buttonText;
+                    resultRichTextBox.Text += buttonText;
                 }
+            }
+        }
 
-                if (inputText == "+")
-                {
-                    solveRichTextBox.Text += inputRichTextBox.Text;
-                    inputRichTextBox.Clear();
-                }
+        private void ButtonClear(object? sender, EventArgs e)
+        {
+            inputRichTextBox.Text = string.Empty;
+            resultRichTextBox.Text = string.Empty;
+        }
+
+        private void SetOperation(object? sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                operation = button.Text;
+                value = double.Parse(resultRichTextBox.Text);
+                operationPressed = true;
+                inputRichTextBox.Text = value + " " + operation;
+            }
+        }
+
+        private void EqualOperation(object? sender, EventArgs e)
+        {
+            operationPressed = false;
+            inputRichTextBox.Text = "";
+            switch (operation)
+            {
+                case "+":
+                    resultRichTextBox.Text = (value + double.Parse(resultRichTextBox.Text)).ToString();  
+                    break;
+                case "-":
+
+                    break;
+                case "*":
+
+                    break;
+                case "/":
+
+                    break;
+                default:
+                    break;
             }
         }
     }
