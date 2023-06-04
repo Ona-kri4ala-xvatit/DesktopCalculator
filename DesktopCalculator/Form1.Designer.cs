@@ -85,7 +85,7 @@
             // 
             // addButton
             // 
-            addButton.BackColor = Color.Turquoise;
+            addButton.BackColor = Color.LightSeaGreen;
             addButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             addButton.Location = new Point(207, 307);
             addButton.Name = "addButton";
@@ -97,7 +97,7 @@
             // 
             // subButton
             // 
-            subButton.BackColor = Color.Turquoise;
+            subButton.BackColor = Color.LightSeaGreen;
             subButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             subButton.Location = new Point(207, 250);
             subButton.Name = "subButton";
@@ -142,7 +142,7 @@
             // 
             // multButton
             // 
-            multButton.BackColor = Color.Turquoise;
+            multButton.BackColor = Color.LightSeaGreen;
             multButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             multButton.Location = new Point(208, 193);
             multButton.Name = "multButton";
@@ -187,7 +187,7 @@
             // 
             // divButton
             // 
-            divButton.BackColor = Color.Turquoise;
+            divButton.BackColor = Color.LightSeaGreen;
             divButton.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             divButton.Location = new Point(208, 136);
             divButton.Name = "divButton";

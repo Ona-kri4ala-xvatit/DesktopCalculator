@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace DesktopCalculator
 {
     public partial class Form1 : Form
@@ -33,31 +35,19 @@ namespace DesktopCalculator
 
         private void ButtonClick(object? sender, EventArgs e)
         {
+            var resultText = inputRichTextBox.Text; //строка ввода
+
+            if ((resultText == "0") || (operationPressed))
+            {
+                resultRichTextBox.Clear();
+            }
+
+            operationPressed = false;
+
             if (sender is Button button)
             {
                 var buttonText = button.Text; //Текст кнопки
-                var resultText = inputRichTextBox.Text; //строка ввода
-
-                if (resultText == "0" || (operationPressed))
-                {
-                    inputRichTextBox.Clear();
-                    resultRichTextBox.Clear();
-                    value = 0;
-                }
-
-                if (buttonText == ".")
-                {
-                    if (!resultText.Contains("."))
-                    {
-                        inputRichTextBox.Text += buttonText;
-                        resultRichTextBox.Text += buttonText;
-                    }
-                }
-                else
-                {
-                    inputRichTextBox.Text += buttonText;
-                    resultRichTextBox.Text += buttonText;
-                }
+                resultRichTextBox.Text += buttonText;
             }
         }
 
@@ -72,7 +62,7 @@ namespace DesktopCalculator
             if (sender is Button button)
             {
                 operation = button.Text;
-                value = double.Parse(resultRichTextBox.Text);
+                value = double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat);
                 operationPressed = true;
                 inputRichTextBox.Text = value + " " + operation;
             }
@@ -80,21 +70,21 @@ namespace DesktopCalculator
 
         private void EqualOperation(object? sender, EventArgs e)
         {
-            operationPressed = false;
-            inputRichTextBox.Text = "";
+            inputRichTextBox.Text = value + " " + operation + " " + resultRichTextBox.Text;
+
             switch (operation)
             {
                 case "+":
-                    resultRichTextBox.Text = (value + double.Parse(resultRichTextBox.Text)).ToString();  
+                    resultRichTextBox.Text = (value + double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
                     break;
                 case "-":
-
+                    resultRichTextBox.Text = (value - double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
                     break;
                 case "*":
-
+                    resultRichTextBox.Text = (value * double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
                     break;
                 case "/":
-
+                    resultRichTextBox.Text = (value / double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
                     break;
                 default:
                     break;
