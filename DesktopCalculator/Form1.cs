@@ -84,7 +84,18 @@ namespace DesktopCalculator
                     resultRichTextBox.Text = (value * double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
                     break;
                 case "/":
-                    resultRichTextBox.Text = (value / double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
+                    try
+                    {
+                        if (resultRichTextBox.Text == "0")
+                        {
+                            throw new DivideByZeroException("Divide by zero");
+                        }
+                        resultRichTextBox.Text = (value / double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        resultRichTextBox.Text = ex.Message.ToString();
+                    }
                     break;
                 default:
                     break;
