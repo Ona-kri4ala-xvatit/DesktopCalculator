@@ -86,7 +86,7 @@ namespace DesktopCalculator
                 case "/":
                     try
                     {
-                        if (resultRichTextBox.Text == "0")
+                        if (resultRichTextBox.Text == "0") //число типа double при делении на ноль возращает бесконечность, а не выкидывает исключение. ѕоэтому приходитс€ просто провер€ть второе число на ноль   
                         {
                             throw new DivideByZeroException("Divide by zero");
                         }
