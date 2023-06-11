@@ -4,6 +4,10 @@ namespace DesktopCalculator
 {
     public partial class Form1 : Form
     {
+        private double value = 0;
+        private string operation = string.Empty;
+        private bool operationPressed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -29,15 +33,9 @@ namespace DesktopCalculator
             #endregion
         }
 
-        private double value = 0;
-        private string operation = string.Empty;
-        private bool operationPressed = false;
-
         private void ButtonClick(object? sender, EventArgs e)
         {
-            var resultText = inputRichTextBox.Text; //строка ввода
-
-            if ((resultText == "0") || (operationPressed))
+            if ((inputRichTextBox.Text == "0") || (operationPressed))
             {
                 resultRichTextBox.Clear();
             }
@@ -75,31 +73,30 @@ namespace DesktopCalculator
             switch (operation)
             {
                 case "+":
-                    resultRichTextBox.Text = (value + double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
+                    resultRichTextBox.Text = MathOperation.Operations(value, resultRichTextBox.Text, 1).ToString();
                     break;
                 case "-":
-                    resultRichTextBox.Text = (value - double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
+                    resultRichTextBox.Text = MathOperation.Operations(value, resultRichTextBox.Text, 2).ToString();
                     break;
                 case "*":
-                    resultRichTextBox.Text = (value * double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
+                    resultRichTextBox.Text = MathOperation.Operations(value, resultRichTextBox.Text, 3).ToString();
                     break;
                 case "/":
                     try
                     {
-                        if (resultRichTextBox.Text == "0") //число типа double при делении на ноль возращает бесконечность, а не выкидывает исключение. ѕоэтому приходитс€ просто провер€ть второе число на ноль   
-                        {
-                            throw new DivideByZeroException("Divide by zero");
-                        }
-                        resultRichTextBox.Text = (value / double.Parse(resultRichTextBox.Text, CultureInfo.InvariantCulture.NumberFormat)).ToString();
+                        resultRichTextBox.Text = MathOperation.Operations(value, resultRichTextBox.Text, 4).ToString();
                     }
                     catch (Exception ex)
                     {
-                        resultRichTextBox.Text = ex.Message.ToString();
+                        MessageBox.Show(ex.Message.ToString(), MessageBoxButtons.OK.ToString());
+                        ButtonClear(this, null);
+                        //resultRichTextBox.Text = ex.Message.ToString();
                     }
                     break;
                 default:
                     break;
             }
         }
+
     }
 }

@@ -245,8 +245,8 @@
             // 
             resultRichTextBox.BorderStyle = BorderStyle.FixedSingle;
             resultRichTextBox.Enabled = false;
-            resultRichTextBox.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            resultRichTextBox.ForeColor = Color.FromArgb(0, 0, 64);
+            resultRichTextBox.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            resultRichTextBox.ForeColor = Color.DarkSlateBlue;
             resultRichTextBox.Location = new Point(13, 44);
             resultRichTextBox.Name = "resultRichTextBox";
             resultRichTextBox.ReadOnly = true;
@@ -263,7 +263,6 @@
             inputRichTextBox.Location = new Point(13, 6);
             inputRichTextBox.Name = "inputRichTextBox";
             inputRichTextBox.ReadOnly = true;
-            inputRichTextBox.RightToLeft = RightToLeft.Yes;
             inputRichTextBox.Size = new Size(255, 32);
             inputRichTextBox.TabIndex = 18;
             inputRichTextBox.Text = "";
@@ -272,7 +271,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(280, 427);
+            ClientSize = new Size(280, 424);
             Controls.Add(inputRichTextBox);
             Controls.Add(resultRichTextBox);
             Controls.Add(equalMarkButton);
