@@ -46,7 +46,8 @@
             sevenButton = new Button();
             equalMarkButton = new Button();
             resultRichTextBox = new RichTextBox();
-            inputRichTextBox = new RichTextBox();
+            toDoMathRichTextBox = new RichTextBox();
+            logFileListBox = new ListBox();
             SuspendLayout();
             // 
             // zeroButton
@@ -236,7 +237,7 @@
             equalMarkButton.Font = new Font("Arial", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             equalMarkButton.Location = new Point(13, 364);
             equalMarkButton.Name = "equalMarkButton";
-            equalMarkButton.Size = new Size(253, 51);
+            equalMarkButton.Size = new Size(253, 48);
             equalMarkButton.TabIndex = 16;
             equalMarkButton.Text = "=";
             equalMarkButton.UseVisualStyleBackColor = false;
@@ -247,32 +248,43 @@
             resultRichTextBox.Enabled = false;
             resultRichTextBox.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             resultRichTextBox.ForeColor = Color.DarkSlateBlue;
-            resultRichTextBox.Location = new Point(13, 44);
+            resultRichTextBox.Location = new Point(13, 56);
             resultRichTextBox.Name = "resultRichTextBox";
             resultRichTextBox.ReadOnly = true;
             resultRichTextBox.RightToLeft = RightToLeft.Yes;
-            resultRichTextBox.Size = new Size(255, 86);
+            resultRichTextBox.Size = new Size(255, 74);
             resultRichTextBox.TabIndex = 17;
             resultRichTextBox.Text = "";
             // 
-            // inputRichTextBox
+            // toDoMathRichTextBox
             // 
-            inputRichTextBox.BorderStyle = BorderStyle.FixedSingle;
-            inputRichTextBox.Enabled = false;
-            inputRichTextBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            inputRichTextBox.Location = new Point(13, 6);
-            inputRichTextBox.Name = "inputRichTextBox";
-            inputRichTextBox.ReadOnly = true;
-            inputRichTextBox.Size = new Size(255, 32);
-            inputRichTextBox.TabIndex = 18;
-            inputRichTextBox.Text = "";
+            toDoMathRichTextBox.BorderStyle = BorderStyle.FixedSingle;
+            toDoMathRichTextBox.Enabled = false;
+            toDoMathRichTextBox.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            toDoMathRichTextBox.Location = new Point(142, 6);
+            toDoMathRichTextBox.Name = "toDoMathRichTextBox";
+            toDoMathRichTextBox.ReadOnly = true;
+            toDoMathRichTextBox.Size = new Size(124, 44);
+            toDoMathRichTextBox.TabIndex = 18;
+            toDoMathRichTextBox.Text = "";
+            // 
+            // logFileListBox
+            // 
+            logFileListBox.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            logFileListBox.FormattingEnabled = true;
+            logFileListBox.Location = new Point(12, 6);
+            logFileListBox.Name = "logFileListBox";
+            logFileListBox.ScrollAlwaysVisible = true;
+            logFileListBox.Size = new Size(124, 43);
+            logFileListBox.TabIndex = 19;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(280, 424);
-            Controls.Add(inputRichTextBox);
+            ClientSize = new Size(280, 418);
+            Controls.Add(logFileListBox);
+            Controls.Add(toDoMathRichTextBox);
             Controls.Add(resultRichTextBox);
             Controls.Add(equalMarkButton);
             Controls.Add(divButton);
@@ -296,6 +308,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculator";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -319,6 +332,7 @@
         private Button sevenButton;
         private Button equalMarkButton;
         private RichTextBox resultRichTextBox;
-        private RichTextBox inputRichTextBox;
+        private RichTextBox toDoMathRichTextBox;
+        private ListBox logFileListBox;
     }
 }
